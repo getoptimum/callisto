@@ -29,6 +29,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/slashing"
 	"github.com/cosmos/cosmos-sdk/x/staking"
 	"github.com/cosmos/gogoproto/proto"
+	registry "github.com/getoptimum/optimum/protocol/x/registry/module"
 )
 
 var once sync.Once
@@ -70,6 +71,7 @@ func getBasicManagers() module.BasicManager {
 		groupmodule.AppModuleBasic{},
 		vesting.AppModuleBasic{},
 		consensus.AppModuleBasic{},
+		registry.AppModuleBasic{},
 	)
 }
 
